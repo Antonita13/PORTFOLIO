@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+}
+body{
+  color: #ededed;
+  background-color: rgb(25, 23, 23);
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  z-index: 100 ;
+}
+.logo{
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-decoration:none;
+  font-weight: 600;
+  
+}
+.navbar a{
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+
+}
+.navbar a:hover{
+  color: rgb(248, 80, 186);
+}
+body{
+  background-color: rgb(25, 23, 23);
+}
+.project h2 {
+    text-align: center;
+    font-size: 25px;;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.project-container .project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+     height: 250px;
+     
+}
+
+.project-box img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    opacity: 0.4;
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgb(11, 11, 11);
+    border-radius: 30px;
+    background: linear-gradient(rgb(232, 22, 134));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.project-box:hover .project-layer {
+    transform: translateY(0);
+}
+
+.project-layer h4 {
+    font-size: 10px;
+    color:rgb(248, 245, 247);
+}
+
+.project-layer p {
+    font-size: 10px;
+    color: rgb(251, 248, 250);
+}
+
+.project-layer a {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-layer a i {
+    font-size: 2rem;
+    color: rgb(239, 41, 113);
+}
+@media screen and (max-width: 480px) {
+    .header  {
+        padding: 15px 10px;
+        /* flex-direction: column; */
+        /* align-items: end; */
+
+/    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        /* display: flex; */
+        /* flex-direction: row; */
+        text-align: right;
+        gap:10px;
+        float: right;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 0;
+        /* flex-direction:row; */
+        text-align: right;
+    }
+    .project-layer h4 {
+        font-size: 14px;
+    }
+
+    .project-layer p {
+        font-size: 7px;
+    }
+
+    .project-box {
+        height: 180px;
+    }
+    .project-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+             <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="about.html">About</a>
+               <a href="skills.html">Skills</a>
+               <a href="projects.html">Projects</a>
+               <a href="contact.html">Contact   </a>
+         </nav>
+     </header>
+     <section class="project" id="project">
+      <h2 class="heading">Latest <span>projects</span></h2>
+
+      <div class="project-container">
+          
+          <div class="project-box">
+              <img src="images/desktop-design.jpg" alt="">
+              <div class="project-layer">
+                  <h4>Profile Card Component</h4>
+                  <p>A profile card component is a versatile and visually appealing way to display a user's or individual's basic information, often used in applications or websites.</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+          <div class="project-box">
+              <img src="images/desktop-design perfume.jpg" alt="">
+              <div class="project-layer">
+                  <h4>Product Card Componemt</h4>
+                  <p>A product card component is an essential UI element used in e-commerce websites and applications to display information about a product in a concise and visually appealing manner.</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+          <div class="project-box">
+              <img src="images/desktop-design column.jpg" alt="">
+              <div class="project-layer">
+                  <h4>3 Column Card Component</h4>
+                  <p>A 3-column card component is a user interface element that organizes content into three equal-width columns.This layout is commonly used in web design to present multiple items or sections side by side in a clean and organize.</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+          <div class="project-box">
+              <img src="images/WheelPower.jpg" alt="">
+              <div class="project-layer">
+                  <h4>Sports club for Intellectually Impaired</h4>
+                  <p> A user-friendly, accessible website designed for a sports club that caters to people with disabilities.</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+          <div class="project-box">
+              <img src="images/hq720.jpg" alt="">
+              <div class="project-layer">
+                  <h4>Login Validation Page</h4>
+                  <p>Validating user input on a login page is crucial for both security and user experience</p>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+          <div class="project-box">
+            <img src="images/thumb_720_450_1411_f.jpg" alt="">
+            <div class="project-layer">
+                <h4>Calculator</h4>
+                <p>A web-based application that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. Built using HTML, CSS, and JavaScript</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+      </div>
+   </section>
+
+
+</body>
+</html> 

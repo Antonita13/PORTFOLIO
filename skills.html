@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+}
+body{
+  color: #ededed;
+  background-color: rgb(25, 23, 23);
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  z-index: 100 ;
+}
+.logo{
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-decoration:none;
+  font-weight: 600;
+  
+}
+.navbar a{
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+
+}
+.navbar a:hover{
+  color: rgb(248, 80, 186);
+}
+.inner{
+  padding-top: 20px;
+  
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 4rem 80px;
+  font-size: smaller;
+}
+.skill-box{
+  padding: 1rem;
+  color: #ddd;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(3,1fr);
+  row-gap:50px;
+  column-gap: 90px;
+  transition: .3s;
+}
+.skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+  width: 35px;
+
+}
+.skill-box:hover .img{
+      transform:translateY(-10px)
+}
+.skill-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.skill-title:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 35px;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #cc2eac;
+  transition: .5s;
+  
+  
+}
+.skill-title:before{
+  content: "";
+  position:absolute;
+  bottom: 0;
+  left: 50%;
+  width: 35px;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: #cc2e97;
+  transition: .5s;
+}
+.img{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+
+}
+.img:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 45px 0 0 45px;
+}
+.skill-title h3{
+  color: #fff;
+  margin-top: 0.5rem;
+}
+.skill-icon{
+  width: 50px;
+  z-index:2 ;
+}
+
+@media (max-width: 768px) {
+  .header  {
+        padding: 15px 10px;
+        /* flex-direction: column; */
+        /* align-items: end; */
+
+/    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        /* display: flex; */
+        /* flex-direction: row; */
+        text-align: right;
+        gap:10px;
+        float: right;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 0;
+        /* flex-direction:row; */
+        text-align: right;
+    }
+
+    .skill-box{
+        padding: 1rem;
+        color: #ddd;
+        cursor: pointer;
+       
+        row-gap:50px;
+        column-gap: 90px;
+        transition: .3s; 
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(1,1fr);
+      }
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+       <a href="#" class="logo">Portfolio</a>
+            <nav class="navbar">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="skills.html">Skills</a>
+              <a href="projects.html">Projects</a>
+              <a href="contact.html">Contact   </a>
+        </nav>
+    </header>
+    <!--===== SKILLS =====-->
+
+           <div class="container" id="container">
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                
+                        <img src="./images/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+
+                    </div>
+                
+                        <h3>HTML 5</h3>
+                    
+                    <p>Standard markup language used to create web pages</p>
+                </div>
+               
+                    <div class="skill-title">
+                        <div class="img">
+                        
+                            <img src="./images/css3-logo-png-transparent-removebg-preview.png" class="skill_icon"width="90PX" height="90PX">
+    
+                        </div>
+
+                        
+                            <h3>CSS 3</h3>
+                        
+                        <p>It is a language used to style web pages</p>
+                        </div>
+                    
+                            <div class="skill-title">
+                                <div class="img">
+                                
+                                    <img src="images/JavaScript-Symbol-removebg-preview.png" class="skill_icon"width="90PX" height="90PX">
+                                </div>
+                                
+                                
+                            <h3>JAVASCRIPT</h3>
+                                
+                                <p>It is a language used to add interactivity to web pages</p>
+                            </div>
+
+                            <div class="skill-title">
+                                <div class="img">
+                                
+                                            <img src="images/ux-ui-logo-removebg-preview.png" class="skill_icon"width="90PX" height="90PX">
+                    
+                                        </div>
+                                            <h3>UI/UX</h3>
+                                       
+                                        <p> It is the process of designing user interface and user experience</p>
+                                        </div>
+                                        
+                                            <div class="skill-title">
+                                                <div class="img">
+                                               
+                                                    <img src="images/py_logo-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                 </div>
+                                                    <h3>PYTHON</h3>
+                                                
+                                                <p> It is a high-level, interpreted programming language</p>
+                                                </div>
+                                                
+                                                    <div class="skill-title">
+                                                        <div class="img">
+                                                            <img src="images/my_sql-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                        </div>
+                                                       
+                                                            <h3>SQL</h3>
+                                                        
+                                                        <p> It is a language used to manage relational databases</p>
+                                                        </div>
+                                                        
+                                                            <div class="skill-title">
+                                                                <div class="img">
+                                                           
+                                                                    <img src="images/excel_logo-removebg-preview.png" class="skill_icon" width="70PX" height="70PX">
+                                                                </div>
+                                                             
+                                                                    <h3>EXCEL</h3>
+                                                           
+                                                                <p> It is a spreadsheet software</p>
+                                                                </div>
+                                                                
+                                                                    <div class="skill-title">
+                                                                        <div class="img">
+                                                                       
+                                                                            <img src="images/power_bi-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                                        </div>
+                                                                        
+                                                                            <h3>POWER BI</h3>
+                                                                        
+                                                                        <p> It is a business analytics service by Microsoft</p>
+                                                                        </div>
+                                                                       
+                                                                            <div class="skill-title">
+                                                                                <div class="img">
+                                                                              
+                                                                                    <img src="images/Tableau-Symbol-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                                                </div>
+                                                                                
+                                                                                    <h3>TABLEAU</h3>
+                                                                           
+                                                                                <p> It is a data visualization tool</p>
+                                                                            </div>
+            </div>
+           </div>
+
+
+    
+</body>
+</html>

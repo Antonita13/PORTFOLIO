@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+}
+body{
+  color: #ededed;
+  background-color: rgb(25, 23, 23);
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  z-index: 100 ;
+}
+.logo{
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-decoration:none;
+  font-weight: 600;
+  
+}
+.navbar a{
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+
+}
+.navbar a:hover{
+  color: rgb(248, 80, 186);
+}
+.hero{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-top: 200px;
+}
+
+.hero .right{
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+.right h2{
+  font-size: 34px;
+  font-weight: bold;
+  color: rgb(205, 50, 151);
+}
+.right h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.right p{
+  color: gray;
+  font-size: 16px;
+  font-weight: 600;
+  width: 80%;
+}
+
+.right .buttton{
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  font-size:xx-small;
+}
+.right .buttton .h-btn{
+  width: 130px;
+  padding: 10px;
+  background-color:transparent;
+  color: #fff;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgb(205, 50, 151);
+  outline: none;
+  cursor: pointer;
+  font-size: 11px;
+  cursor: pointer;
+  transition: .4s;
+  outline: none;
+}
+
+.h-btn:hover{
+scale: 1.1;
+box-shadow: 0 9px 12px rgb(205, 50, 151);
+border-radius: 23px;
+outline: none;
+filter: drop-shadow( 0 0 10px rgb(205, 50, 151));
+}
+
+.right .social-media{
+  
+  display: flex;
+  gap: 30px;
+  margin-top: 90px;
+ 
+}
+
+.right .social-media li {
+  width: 40px;
+  height: 40px;
+  background-color:transparent;
+  border: 2px solid rgb(205, 50, 151);
+  outline: none;
+  box-shadow: 0 0 12px rgb(205, 50, 151);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right .social-media li:hover{
+  scale: 1.1;
+  box-shadow: 0 22px 30px rgb(205, 50, 151);
+}
+
+
+.right .social-media li a{
+  color: #fff;;
+  font-size: 20px;
+}
+
+
+.hero .left{
+  margin-right: 140px;
+  margin-top: -10px;
+}
+
+.hero .left .image{
+  
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 50%;
+  background-color:transparent;
+  transition: .5s;
+}
+
+.left .image img{
+  width: 300px;
+  height: 296px;
+  border-radius: 50%;
+  position: relative;
+  left: 100px;
+
+}
+/* @media screen and (max-width: 480px) {
+    .header {
+        padding: 15px 10px;
+    }
+    .navbar a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    .right h2, .right h1 {
+        font-size: 24px;
+    }
+    .right p {
+        font-size: 12px;
+    }
+    .right .buttton .h-btn {
+        width: 90px;
+        padding: 6px;
+        font-size: 12px;
+    }
+    .left .image, .left .image img {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        bottom:;
+    }
+} */
+@media screen and (max-width: 480px) {
+    .header  {
+        padding: 15px 10px;
+        /* flex-direction: column; */
+        /* align-items: end; */
+
+/    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        /* display: flex; */
+        /* flex-direction: row; */
+        text-align: right;
+        gap:10px;
+        float: right;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 0;
+        /* flex-direction:row; */
+        text-align: right;
+    }
+
+   
+
+    .right {
+        margin-left: 0;
+        text-align: center;
+        position: relative;
+        right: 70px;
+        
+    }
+
+    .right h1, .right h2 {
+        font-size: 20px;
+        
+    }
+
+    .right p {
+        font-size: 14px;
+        width: 100%;
+        padding:20px;
+    }
+
+    .right .buttton {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+    }
+
+    .right .buttton .h-btn {
+        width: 100px;
+        padding: 8px;
+        font-size: 10px;
+    }
+    .h-btn:hover{
+         scale: 1.1;
+         box-shadow: 0 9px 12px rgb(205, 50, 151);
+         border-radius: 23px;
+         outline: none;
+         filter: drop-shadow( 0 0 10px rgb(205, 50, 151));
+    }
+
+    .right .social-media {
+        margin-top: 20px;
+        margin-left:70px;
+        gap: 15px;
+    }
+
+    .left .image, .left .image img {
+        width: 200px;
+        height: 200px;
+        left: 50px;
+        
+        
+    }
+
+    .left {
+      margin-right: 0;
+      position: relative;
+      
+      
+     
+
+    }
+    .hero {
+      display:grid;
+    
+    
+    
+    }
+  
+  
+    
+}
+
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+             <nav class="navbar">
+               <a href="index.html">Home</a>
+               <a href="about.html">About</a>
+               <a href="projects.html">Projects</a>
+               <a href="skills.html">Skills</a>
+               <a href="contact.html">Contact </a>
+         </nav>
+     </header>
+    
+     <div class="hero" id="hero">
+
+      <div class="left">
+        <div class="image">
+            <img src="./images/my pic.jpeg" alt=""/>
+        </div>
+    </div>
+        <div class="right">
+            <h1>Hi, I am Anto V</h1>
+            <h2>Web developer</h2>
+            <p>I'm a web designer with extensive experience in creating visually appealing and user-friendly websites. <br>My expertise lies on creating webisite design, frontend design, and UI/UX design. 
+            </p>
+            <div class="buttton">
+                <a href="contact.html"><button class="h-btn">Hire Me</button></a>
+               
+                <a href="Anto V.pdf" download="Resume"><button class="h-btn"> Download Resume</button></a>
+            </div>
+         <div class="social-media">
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/anto-v-19a425232"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/Antonita13"><i class="fa-brands fa-github"></i></a></li>
+        </div>
+        </div>
+
+        <!-- <div class="left">
+            <div class="image">
+                <img src="my pic.jpeg" alt=""/>
+            </div>
+        </div> -->
+    </div>
+    
+    
+</body>
+</html>
