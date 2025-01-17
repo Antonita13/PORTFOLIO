@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+   
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 *{
@@ -15,10 +15,7 @@
   list-style: none;
   text-decoration: none;
 }
-html{
-  scroll-behavior: smooth;
-  scroll-padding: 10rem;
-}
+
 body{
   color: #ededed;
   background-color: rgb(25, 23, 23);
@@ -232,15 +229,16 @@ body{
          </nav>
      </header>
      <div class="container" id="contact">
-        <form>
+        <form onsubmit="sendEmail(); reset(); return false;">
           <h1>Contact</h1>
-          <input type="text" id="firstName" placeholder=" Name" required />
+          <input type="text" name="" id="firstName" placeholder=" Name" required="required" />
+          
           <!-- <input type="text" id="lastName" placeholder="Last Name" required /> -->
-          <input type="email" id="email" placeholder="Email" required />
+          <input type="email" name="" id="email" placeholder="Email" required="required" />
           <!-- <input type="text" id="mobile" placeholder="Mobile" required /> -->
           <h4>Type Your Message Here...</h4>
-          <textarea required></textarea>
-          <input type="submit" value="Send" id="button" />
+          <textarea required="required"></textarea>
+          <input type="submit" name="" value="Send" id="button" />
         </form>
       </div>
       <footer class="footer">
@@ -254,6 +252,21 @@ body{
     </footer>
    
 
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "grangerantolin@gmail.com",
+        Password : "password",
+        To : 'anto070103@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New contact from enquiry",
+        Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+  }
+</script>
 </body>
 </html>
