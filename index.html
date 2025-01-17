@@ -3,351 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            list-style: none;
-            text-decoration: none;
-        }
 
-        body {
-            color: #ededed;
-            background-color: rgb(25, 23, 23);
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 10px;
-            background: transparent;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 25px;
-            color: white;
-            font-weight: 600;
-        }
-
-        .navbar {
-            display: flex;
-            gap: 35px;
-        }
-
-        .navbar a {
-            font-size: 20px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        .navbar a:hover {
-            color: rgb(248, 80, 186);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            height: 3px;
-            width: 25px;
-            background: white;
-            margin-bottom: 4px;
-            border-radius: 5px;
-        }
-
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            padding-top: 200px;
-        }
-
-        .hero .right {
-            margin-left: 100px;
-        }
-
-        .right h2 {
-            font-size: 34px;
-            font-weight: bold;
-            color: rgb(205, 50, 151);
-        }
-
-        .right h1 {
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        .right p {
-            color: gray;
-            font-size: 16px;
-            font-weight: 600;
-            width: 80%;
-        }
-
-        .right .buttton {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-            font-size: xx-small;
-        }
-
-        .h-btn {
-            width: 130px;
-            padding: 10px;
-            background-color: transparent;
-            color: #fff;
-            border: 2px solid white;
-            box-shadow: 0 0 10px rgb(205, 50, 151);
-            font-size: 11px;
-            cursor: pointer;
-            transition: 0.4s;
-        }
-
-        .h-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 9px 12px rgb(205, 50, 151);
-            border-radius: 23px;
-        }
-
-        .right .social-media {
-            display: flex;
-            gap: 30px;
-            margin-top: 90px;
-        }
-
-        .right .social-media li {
-            width: 40px;
-            height: 40px;
-            background-color: transparent;
-            border: 2px solid rgb(205, 50, 151);
-            box-shadow: 0 0 12px rgb(205, 50, 151);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.4s;
-        }
-
-        .right .social-media li:hover {
-            transform: scale(1.1);
-            box-shadow: 0 22px 30px rgb(205, 50, 151);
-        }
-
-        .right .social-media li a {
-            color: #fff;
-            font-size: 20px;
-        }
-
-        .hero .left {
-            margin-right: 140px;
-        }
-
-        .hero .left .image {
-            width: 300px;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: 0.5s;
-        }
-
-        .left .image img {
-            width: 300px;
-            height: 296px;
-            border-radius: 50%;
-            position: relative;
-            left: 100px;
-        }
-
-        /* Media queries for tablets */
-        @media screen and (max-width: 768px) {
-            .header {
-                padding: 15px 10px;
-            }
-
-            .logo {
-                font-size: 22px;
-            }
-
-            .navbar {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hero {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .right {
-                margin-left: 0;
-                text-align: center;
-            }
-
-            .right h1, .right h2 {
-                font-size: 24px;
-            }
-
-            .right p {
-                font-size: 14px;
-                width: 90%;
-            }
-
-            .right .buttton {
-                flex-direction: row;
-                justify-content: center;
-                gap: 10px;
-            }
-
-            .right .social-media {
-                margin-top: 20px;
-                gap: 20px;
-                justify-content: center;
-            }
-
-            .left .image, .left .image img {
-                width: 250px;
-                height: 250px;
-                left: 0;
-            }
-        }
-
-        /* Media queries for smartphones */
-        @media screen and (max-width: 480px) {
-            .header {
-                padding: 10px;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .logo {
-                font-size: 18px;
-                text-align: center;
-                margin-bottom: 10px;
-            }
-
-            .navbar {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-                background-color: rgb(25, 23, 23);
-                width: 100%;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                padding: 10px 0;
-            }
-
-            .navbar.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: flex;
-                justify-content: center;
-            }
-
-            .hero {
-                flex-direction: column;
-                align-items: center;
-                padding-top: 120px;
-            }
-
-            .right {
-                text-align: center;
-                margin-left: 0;
-            }
-
-            .right h1, .right h2 {
-                font-size: 18px;
-            }
-
-            .right p {
-                font-size: 12px;
-                padding: 10px;
-            }
-
-            .right .buttton {
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-            }
-
-            .right .buttton .h-btn {
-                width: 100px;
-                padding: 5px;
-                font-size: 10px;
-            }
-
-            .right .social-media {
-                margin-top: 20px;
-                justify-content: center;
-                gap: 10px;
-            }
-
-            .right .social-media li {
-                width: 30px;
-                height: 30px;
-            }
-
-            .left .image, .left .image img {
-                width: 150px;
-                height: 150px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- HEADER -->
+    <section class="home" id="home">
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
+        <!-- <button class="hamburger"> -->
+            <!-- <i class="fa fa-bars"></i>
+        </button> -->
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="contact.html">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
     </header>
 
     <div class="hero" id="hero">
         <div class="left">
             <div class="image">
-                <img src="./images/my pic.jpeg" alt="myimage"/>
+                <img src="./images/my pic.jpeg" alt=""/>
             </div>
         </div>
         <div class="right">
+            
             <h1>Hi, I am Anto V</h1>
-            <h2>Web Developer</h2>
-            <p>I'm a web designer with extensive experience in creating visually appealing and user-friendly websites. My expertise lies in creating website design, frontend design, and UI/UX design.</p>
+            <h2>Web developer</h2>
+            <p>I'm a web designer with extensive experience in creating visually appealing and user-friendly websites. My expertise lies in website design, frontend design, and UI/UX design.</p>
             <div class="buttton">
                 <a href="contact.html"><button class="h-btn">Hire Me</button></a>
                 <a href="Anto V.pdf" download="Resume"><button class="h-btn">Download Resume</button></a>
@@ -360,14 +49,240 @@
             </div>
         </div>
     </div>
+</section>
+<br>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navbar = document.querySelector('.navbar');
+    <section class="abouts" id="about">
+        
+        <div class="about">
+            
+            
+            <p class="about-p">As a detail-oriented and innovative B.E graduate, I specialize in crafting exceptional user experiences through cutting-edge front-end development. With a solid foundation in computer science and software engineering, I excel in designing and building responsive, interactive, and visually stunning web applications.</p>
+        </div>
+         <div class="education-container">
+            <div class="education-box">
+                <h3>B.E CSE</h3><br>
+                <!-- <p><span>Specialization: </span>Information Technology</p> -->
+                <p><span>University:</span>Anna University</p>
+                <p><span>Year:</span>2020-2024</p>
+                <p><span>Percentage:</span>70%</p><br>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="education-box">
+                <h3>XII Grade</h3><br>
+                <p><span>School:</span>Cluny Matric Hr Sec School</p>
+                <p><span>Year:</span>2019-2020</p>
+                <p><span>Percentage:</span>60%</p><br>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="education-box">
+                <h3>X Grade</h3><br>
+                <p><span>School:</span>Cluny Matric Hr Sec School</p>
+                <p><span>Year:</span>2017-2018</p>
+                <p><span>Percentage:</span>87%</p><br>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+        
+       </section>
 
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
-    </script>
+
+
+
+       <section class="skills" id="skills">
+        
+        <div class="container" >
+            
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                
+                        <img src="./images/png-clipart-html-logo-html5-logo-icons-logos-emojis-tech-companies-thumbnail-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+
+                    </div>
+                
+                        <h3>HTML 5</h3>
+                    
+                    <p>Standard markup language used to create web pages</p>
+                </div>
+               
+                    <div class="skill-title">
+                        <div class="img">
+                        
+                            <img src="./images/css3-logo-png-transparent-removebg-preview.png" class="skill_icon"width="90PX" height="90PX">
+    
+                        </div>
+
+                        
+                            <h3>CSS 3</h3>
+                        
+                        <p>It is a language used to style web pages</p>
+                        </div>
+                    
+                            <div class="skill-title">
+                                <div class="img">
+                                
+                                    <img src="images/JavaScript-Symbol-removebg-preview.png" class="skill_icon"width="90PX" height="90PX">
+                                </div>
+                                
+                                
+                            <h3>JAVASCRIPT</h3>
+                                
+                                <p>It is a language used to add interactivity to web pages</p>
+                            </div>
+
+                            <div class="skill-title">
+                                <div class="img">
+                                
+                                            <img src="images/ux-ui-logo-removebg-preview.png" class="skill_icon"width="90PX" height="90PX">
+                    
+                                        </div>
+                                            <h3>UI/UX</h3>
+                                       
+                                        <p> It is the process of designing user interface and user experience</p>
+                                        </div>
+                                        
+                                            <div class="skill-title">
+                                                <div class="img">
+                                               
+                                                    <img src="images/py_logo-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                 </div>
+                                                    <h3>PYTHON</h3>
+                                                
+                                                <p> It is a high-level, interpreted programming language</p>
+                                                </div>
+                                                
+                                                    <div class="skill-title">
+                                                        <div class="img">
+                                                            <img src="images/my_sql-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                        </div>
+                                                       
+                                                            <h3>SQL</h3>
+                                                        
+                                                        <p> It is a language used to manage relational databases</p>
+                                                        </div>
+                                                        
+                                                            <div class="skill-title">
+                                                                <div class="img">
+                                                           
+                                                                    <img src="images/excel_logo-removebg-preview.png" class="skill_icon" width="70PX" height="70PX">
+                                                                </div>
+                                                             
+                                                                    <h3>EXCEL</h3>
+                                                           
+                                                                <p> It is a spreadsheet software</p>
+                                                                </div>
+                                                                
+                                                                    <div class="skill-title">
+                                                                        <div class="img">
+                                                                       
+                                                                            <img src="images/power_bi-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                                        </div>
+                                                                        
+                                                                            <h3>POWER BI</h3>
+                                                                        
+                                                                        <p> It is a business analytics service by Microsoft</p>
+                                                                        </div>
+                                                                       
+                                                                            <div class="skill-title">
+                                                                                <div class="img">
+                                                                              
+                                                                                    <img src="images/Tableau-Symbol-removebg-preview.png" class="skill_icon" width="90PX" height="90PX">
+                                                                                </div>
+                                                                                
+                                                                                    <h3>TABLEAU</h3>
+                                                                           
+                                                                                <p> It is a data visualization tool</p>
+                                                                            </div>
+            </div>
+           </div>
+       </section>
+
+
+       <section class="project" id="project">
+        <h2 class="heading">Latest projects</h2>
+  
+        <div class="project-container">
+            
+            <div class="project-box">
+                <img src="images/desktop-design.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Profile Card Component</h4>
+                    <p>A profile card component is a versatile and visually appealing way to display a user's or individual's basic information.</p>
+                    <a href="https://antonita13.github.io/profile-card-/">></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/desktop-design perfume.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Product Card Componemt</h4>
+                    <p>A product card component is an essential UI element used in e-commerce websites and applications to display information about a product.</p>
+                    <a href="https://antonita13.github.io/product_card/"></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/desktop-design column.jpg" alt="">
+                <div class="project-layer">
+                    <h4>3 Column Card Component</h4>
+                    <p>A 3-column card component is a user interface element that organizes content into three equal-width columns.</p>
+                    <a href="https://antonita13.github.io/Columns-cards/"></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/WheelPower.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Sports club for Intellectually Impaired</h4>
+                    <p> A user-friendly, accessible website designed for a sports club that caters to people with disabilities.</p>
+                    <a href="#">></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/hq720.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Login Validation Page</h4>
+                    <p>Validating user input on a login page is crucial for both security and user experience.</p>
+                    <a href="#">></a>
+                </div>
+            </div>
+            <div class="project-box">
+              <img src="images/thumb_720_450_1411_f.jpg" alt="">
+              <div class="project-layer">
+                  <h4>Calculator</h4>
+                  <p>A web-based application that allows users to perform basic arithmetic operations. Built using HTML, CSS, and JavaScript.</p>
+                  <a href="https://antonita13.github.io/pr1/">></a>
+              </div>
+          </div>
+        </div>
+     </section>
+
+     <section class="contact">
+        <!-- <h1 style="text-align: center;"> Get in touch</h1> -->
+
+
+     <div class="container" id="contact">
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <h1>Contact</h1>
+          <input type="text" name="" id="firstName" placeholder=" Name" required="required" />
+          
+          <!-- <input type="text" id="lastName" placeholder="Last Name" required /> -->
+          <input type="email" name="" id="email" placeholder="Email" required="required" />
+          <!-- <input type="text" id="mobile" placeholder="Mobile" required /> -->
+          <h4>Type Your Message Here...</h4>
+          <textarea required="required"></textarea>
+          <input type="submit" name="" value="Send" id="button" />
+        </form>
+      </div>
+      <footer class="footer">
+        <p class="footer__title"></p>
+        <div class="footer__social">
+            <a href="#" class="fa-brands fa-facebook-f"><i class='bx bxl-facebook' ></i></a>
+            <a href="#" class="fa-brands fa-instagram"><i class='bx bxl-instagram' ></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        </div>
+        <p>&#169; 2025 copyright all right reserved  </p>
+    </footer>
+    </section>
+    
 </body>
-</html>
+<script src="index.js"></script>
+<
